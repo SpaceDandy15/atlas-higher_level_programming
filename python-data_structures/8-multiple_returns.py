@@ -2,7 +2,13 @@
 def multiple_returns(sentence):
     my_tuple = ()
     if len(sentence) == 0:
-        my_tuple = 0, "None"
+        my_tuple = (0, "None")
     else:
-        my_tuple = len(sentnce), sentence[0]
-        return my_tuple
+        my_tuple = (len(sentence), sentence[0])
+    return my_tuple
+
+# Example usage
+if __name__ == "__main__":
+    sentence = "Hello, World!"
+    length, first = multiple_returns(sentence)
+    print(f"Length: {length} - First character: {first}")
