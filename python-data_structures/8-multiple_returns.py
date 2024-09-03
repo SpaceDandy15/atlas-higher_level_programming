@@ -6,9 +6,3 @@ def multiple_returns(sentence):
     else:
         my_tuple = (len(sentence), sentence[0])
     return my_tuple
-
-# Example usage
-if __name__ == "__main__":
-    sentence = "Hello, World!"
-    length, first = multiple_returns(sentence)
-    print(f"Length: {length} - First character: {first}")
