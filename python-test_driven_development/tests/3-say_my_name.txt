@@ -1,0 +1,51 @@
+>>> from say_my_name_module import say_my_name
+
+# Test case 1: Valid first and last name
+>>> say_my_name("John", "Doe")
+My name is John Doe
+
+# Test case 2: Valid first name with no last name
+>>> say_my_name("Jane")
+My name is Jane 
+
+# Test case 3: Handling TypeError for non-string first name
+>>> say_my_name(123, "Doe")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+
+Traceback (most recent call last):
+    ...
+TypeError: first_name must 
+
+Traceback (most recent call last):
+    ...
+TypeError: 
+
+Traceback (most recent call last):
+    ...
+
+Traceback (most recent call last):
+    
+
+Traceback (most recen
+# Test case 4: Handling TypeError for non-string last name
+>>> say_my_name("John", 456)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a 
+Traceback (most recent call last):
+    ...
+TypeErro
+
+Traceback (most recent call last):
+    ...
+
+Traceback (most recent 
+
+Traceback (mos
