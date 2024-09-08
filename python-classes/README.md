@@ -7,4 +7,8 @@ file 2 class Square that defines a square by: (based on 1-square.py)
 
 file 3 class Square that defines a square by: (based on 2-square.py)
 
-file 4  class Square that defines a square by: (based on 3-square.py
+file 4  class Square that defines a square by: (based on 3-square.py)
+
+file 5  class Square that defines a square by: (based on 4-square.py)
+
+
