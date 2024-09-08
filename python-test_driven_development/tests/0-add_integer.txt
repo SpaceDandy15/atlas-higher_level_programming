@@ -1,0 +1,42 @@
+0-add_integer.py Documentation
+Overview
+0-add_integer.py defines a Python function add_integer that performs integer addition. It ensures that any float arguments are typecasted to integers before addition and raises a TypeError if the inputs are not integers or floats.
+
+Function Definition
+add_integer(a, b=98)
+Description
+The add_integer function takes two arguments and returns their sum as an integer. If either argument is a float, it will be converted to an integer before performing the addition. If the arguments are not of type integer or float, a TypeError will be raised.
+
+Parameters
+a (int, float): The first number to be added. It can be an integer or a float. If a float is provided, it is converted to an integer.
+b (int, float, optional): The second number to be added. Defaults to 98 if not provided. It can also be an integer or a float, which will be converted to an integer if necessary.
+Return Value
+The function returns the sum of a and b, both converted to integers.
+
+Errors
+TypeError: Raised if a or b is neither an integer nor a float. The error message will specify which argument is invalid:
+"a must be an integer" if a is not an integer or float.
+"b must be an integer" if b is not an integer or float.
+Examples
+Here are some examples of how the add_integer function can be used:
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(1.5, 2.5)
+4
+
+>>> add_integer(1.5)
+99
+
+>>> add_integer("1", 2)
+TypeError: a must be an integer
+
+>>> add_integer(1, "2")
+TypeError: b must be an integer
+
+
+Notes
+Floats are converted to integers by truncating the decimal part using the int() function.
+The default value for b is 98 if no second argument is provided.
+Passing non-numeric values (e.g., strings) for a or b will result in a TypeError.
