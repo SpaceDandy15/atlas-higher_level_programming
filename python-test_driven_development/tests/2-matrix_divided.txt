@@ -1,54 +1,117 @@
-The matrix_divided function takes a matrix (a list of lists containing integers or floats) and divides each element by a given divisor. It performs several checks to ensure that the inputs are valid and handles errors gracefully. After performing the division, it returns a new matrix with the results.
+>>> from matrix_divided import matrix_divided
 
-Detailed Explanation
-Function Definition and Docstring:
-def matrix_divided(matrix, div):
-    """Divide all elements of a matrix.
+# Test case 1: Basic functionality
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
 
-    Args:
-        matrix (list): A list of lists of ints or floats.
-        div (int/float): The divisor.
-    Raises:
-        TypeError: If the matrix contains non-numbers.
-        TypeError: If the matrix contains rows of different sizes.
-        TypeError: If div is not an int or float.
-        ZeroDivisionError: If div is 0.
-    Returns:
-        A new matrix representing the result of the division.
-    """
-The function is defined to take two parameters: matrix and div.
-The docstring describes the arguments, exceptions, and return value of the function.
-Input Validations:
+>>>
+>>> matrix_divided(matrix, 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
 
-Matrix Validation:
-if (not isinstance(matrix, list) or matrix == [] or
-        not all(isinstance(row, list) for row in matrix) or
-        not all((isinstance(ele, int) or isinstance(ele, float))
-           for ele in [num for row in matrix for num in row])):
-    raise TypeError("matrix must be a matrix (list of lists) of "
-                "integers/floats")
-Checks if matrix is a list.
-Checks if matrix is not empty.
-Ensures that each element of matrix is a list (each row).
-Verifies that all elements within these rows are either integers or floats.
-Row Size Consistency:
+# Test case 2: Different matrix and divisor
+>>> matrix = [[4, 8, 12], [16, 20, 24]]
+>>> matrix_divided(matrix, 4)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
 
-if not all(len(row) == len(matrix[0]) for row in matrix):
-    raise TypeError("Each row of the matrix must have the same size")
-Checks if all rows of the matrix have the same number of elements.
-Divisor Validation:
+# Test case 3: Dividing by a float
+>>> matrix = [[2.5, 5.0], [7.5, 10.0]]
+>>> matrix_divided(matrix, 2.5)
+[[1.0, 2.0], [3.0, 4.0]]
 
-if not isinstance(div, int) and not isinstance(div, float):
-    raise TypeError("div must be a number")
-Ensures that div is either an integer or a float.
-Zero Division Check:
+# Test case 4: Zero division error
+>>> matrix = [[1, 2], [3, 4]]
 
-if div == 0:
-    raise ZeroDivisionError("division by zero")
-Raises an exception if the divisor is zero to prevent division by zero errors.
-Matrix Division:
+>
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
 
-return ([list(map(lambda x: round(x / div, 2), row)) for row in matrix])
-Uses a list comprehension to iterate through each row of the matrix.
-For each row, it applies map with a lambda function that divides each element by div and rounds the result to two decimal places.
-Constructs a new list (row) with the computed values and returns a new matrix composed of these rows.
+
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: d
+
+Traceback (most recent call last):
+    ...
+Zer
+
+Traceback (most recent call la
+
+Traceback (mos
+# Test case 5: TypeError for invalid divisor
+>>> matrix = [[1, 2], [3, 4]]
+>>> matrix_divided(matrix, "a")
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+
+Traceback (most recent call last):
+    ...
+TypeError: div must be a numbe
+
+Traceback (most recent call last):
+    ...
+TypeError: div
+
+Traceback (most recent call last):
+    ...
+TypeE
+
+Traceback (most recent ca
+
+Traceback (most r
+
+Traceback
+# Test case 6: TypeError for invalid matrix
+
+>>>
+>>> matrix = [[1, 2], "not_a_row"]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (
+
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a
+
+Traceback (most recent call last):
+    ...
+TypeError
+
+Traceback (most recent
+
+Traceback (m
+list of lists) of integers/floats
+
+# Test case 7: Matrix with inconsistent row sizes
+>>> matrix = [[1, 2], [3]]
+>>> matrix_divided(matrix, 2)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the 
+
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix mus
+
+Traceback (most recent call last):
+    ...
+TypeError: E
+
+Traceback (most recent call last):
+    ...
+
+Traceb
