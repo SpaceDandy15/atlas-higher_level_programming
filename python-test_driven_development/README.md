@@ -8,3 +8,5 @@ file 3  function that prints My name is <first name> <last name>
 file 4  function that prints a square with the character #
 
 file 5 function that prints a text with 2 new lines after each of these characters: ., ? and :.
+
+file 6  write unittests for the function def max_integer(list=[]):.
