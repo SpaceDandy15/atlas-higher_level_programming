@@ -1,0 +1,107 @@
+>>> from text_indentation import text_indentation
+>>> text_indentation("Hello. How are you? I'm fine.")
+Hello.
+
+How are you?
+
+I'm fine.
+
+
+Hello.
+
+How are you?
+
+I'm fin
+
+Hello.
+
+How ar
+
+H
+>>> text_indentation("This is a test: the indentation should be correct.")
+This is a test:
+
+the indentation should be correct.
+
+
+This is a test:
+
+the indentation should
+
+This is a test:
+
+the indentati
+
+Thi
+>>> text_indentation("This is a long sentence without punctuation but has some spaces.  This is another sentence.")
+This is a long sentence without punctuation but has some spaces.
+
+This is another sentence.
+
+
+This is a long sentence without punctuation but has some spaces.
+
+This is another sentence.
+
+>>
+
+This is a long sentence without punctuation but has some spaces.
+
+This is another sent
+
+This is a long sentence without punctuation but has some spaces.
+
+This
+
+This is a long sentence without punctuation but has some space
+
+This is a long sentence without p
+
+This is a long sentence wi
+
+This is a long sen
+
+This is a
+>>> text_indentation("  This starts with spaces.  Here is a question?  And a colon: followed by text.")
+This starts with spaces.
+
+Here is a question?
+
+And a colon:
+
+followed by text.
+
+
+This starts with spaces.
+
+Here is a question?
+
+And a colon:
+
+followed 
+
+This starts with spaces.
+
+Here is a question?
+
+And a co
+
+This starts with spaces.
+
+Here is a ques
+
+This starts with
+>>> text_indentation("No punctuation here should remain the same  but extra spaces   should be handled properly.")
+No punctuation here should remain the same  but extra spaces   should be handled properly.
+
+No punctuation here should remain the same  but extra spaces   should be handled pr
+
+No punctuation here should remain the same  but extra spaces   should be h
+
+No punctuation here should remain the same  but extra 
+
+No punctuation here should remain the same  
+
+No punctuation here shoul
+
+No pun
