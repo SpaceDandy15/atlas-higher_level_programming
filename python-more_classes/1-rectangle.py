@@ -1,20 +1,9 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 
-
-
-cl
 class Rectangle:
-    
-  
-"""Represent a rectangle."""
+    """Represent a rectangle."""
 
-    
-
-    de
-
-
- 
-def __init__(self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
 
         Args:
@@ -24,77 +13,29 @@ def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
 
-
-        self.width = width
-        self.height = he
-
-        self.width = width
-        self.heig
-
-        self.width = width
- 
-
-        self
     @property
     def width(self):
-        
- 
-"""Get/set the width of the rectangle."""
+        """Get/set the width of the rectangle."""
         return self.__width
 
-
-
-  
     @width.setter
-    
-   
-def width(self, value):
-        
-      
-if not isinstance(value, int):
-            
-            r
-raise TypeError("width must be an integer")  # Fixed typo here
-        
-        
-
-   
-if value < 0:
-            
-           
-
-   
-raise ValueError("width must be >= 0")
+    def width(self, value):
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")  # Fixed typo here
+        if value < 0:
+            raise ValueError("width must be >= 0")  # Fixed error message here
         self.__width = value
 
-
-        self.__width = value
-
-   
-
-        self.__width = value
-
-
-        self.__width =
     @property
-    
-   
-def height(self):
+    def height(self):
         """Get/set the height of the rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
-            raise TypeError("height must be an integer")
+            raise TypeError("height must be an integer")  # Fixed typo here
         if value < 0:
-            
-            
-
- 
-raise ValueError("height must be >= 0")
+            raise ValueError("height must be >= 0")  # Fixed error message here
         self.__height = value
 
-        self.__height = valu
-
-        self.__height =
