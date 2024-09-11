@@ -94,11 +94,15 @@ class Rectangle:
 
         Returns:
             Rectangle: The rectangle with the greater area, or rect_1 if equal.
+
+        Raises:
+            TypeError: If either rect_1 or rect_2 is not an instance of Rectangle.
         """
-        if not isinstance(rect_1, cls) or not isinstance(rect_2, cls):
-            raise TypeError("Both arguments must be instances of Rectangle")
+        if not isinstance(rect_1, cls):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, cls):
+            raise TypeError("rect_2 must be an instance of Rectangle")
         
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
-
