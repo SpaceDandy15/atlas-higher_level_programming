@@ -45,7 +45,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
-               raise TypeError("height must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
@@ -63,14 +63,14 @@ class Rectangle:
     def __str__(self):
         """Return the printable representation of the Rectangle.
 
-        Represents the rectangle with the # character.
+        Represents the rectangle with the print_symbol character.
         """
         if self.__width == 0 or self.__height == 0:
             return ""
 
         rect = []
         for i in range(self.__height):
-            rect.append('#' * self.__width)
+            rect.append(str(Rectangle.print_symbol) * self.__width)
             if i != self.__height - 1:
                 rect.append("\n")
         return "".join(rect)
@@ -83,3 +83,4 @@ class Rectangle:
         """Print a message for every deletion of a Rectangle."""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
