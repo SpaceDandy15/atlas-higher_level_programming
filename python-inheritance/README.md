@@ -9,3 +9,5 @@ file 3 is a function that returns True if the object is an instance of, or if th
 File 4 a function that returns True if the object is an instance of a class that inherited (directly or indirectly) from the specified class ; otherwise False.
 
 File 5 is an empty class BaseGeometry.
+
+file 6 a class BaseGeometry (based on 5-base_geometry.py).
