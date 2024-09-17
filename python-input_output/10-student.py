@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a class student"""
+"""Defines a class Student."""
 
 
 class Student:
@@ -11,22 +11,21 @@ class Student:
         Args:
             first_name (str): The first name of the student.
             last_name (str): The last name of the student.
-            age (int): The age of teh student.
+            age (int): The age of the student.
         """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """Get a dictionary reprsenetation of the Student.
+        """Get a dictionary representation of the Student.
         
-        If attrs is a list of strings, reprsent only those attributes
+        If attrs is a list of strings, represent only those attributes
         included in the list.
 
         Args:
-            attrs (list): (Optional) The attributes to reprsent.
+            attrs (list): (Optional) The attributes to represent.
         """
-        if (type(attrs) == list and
-                all(type(ele) == str for ele in attrs)):
+        if isinstance(attrs, list) and all(isinstance(ele, str) for ele in attrs):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
