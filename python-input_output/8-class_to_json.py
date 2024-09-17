@@ -1,21 +1,7 @@
 #!/usr/bin/python3
-"""Defines a class student"""
+"""Defines a python class-to-JSON function."""
 
 
-class Student:
-    """Represent a student."""
-
-    def __init__(self, first_name, last_name, age):
-        """Initialize a new student.
-
-        Args:
-            first_name (str): The first name of the student.
-            last_name (str): The last name of the student.
-            age (int): The age of teh student.
-        """
-        self.first_name = first_name
-        self.last_name = last_name
-        self.age = age
-    def to_json(self):
-        """Get a dictionary reprsentation of the Student."""
-        return self.__dict__
+def class_to_json(obj):
+    """Return the dictionart reprsentation of a simple data struct"""
+    return obj.__dict__
