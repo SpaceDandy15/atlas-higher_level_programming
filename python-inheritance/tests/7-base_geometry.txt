@@ -1,4 +1,10 @@
->>> BaseGeometry = __import__('test.7_base_geometry').BaseGeometry
+>>> import sys
+>>> import importlib.util
+>>> spec = importlib.util.spec_from_file_location('BaseGeometry', './7_base_geometry.py')
+>>> module = importlib.util.module_from_spec(spec)
+>>> sys.modules['BaseGeometry'] = module
+>>> spec.loader.exec_module(module)
+>>> BaseGeometry = module.BaseGeometry
 >>> bg = BaseGeometry()
 >>> bg.area()
 Traceback (most recent call last):
