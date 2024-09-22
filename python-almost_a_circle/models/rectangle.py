@@ -122,21 +122,30 @@ class Rectangle(Base):
         """
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
-        Assigns arguments to attributes.
+        Assigns arguments to attributes using *args or **kwargs.
 
         Args:
-            args (tuple): A variable number of arguments in the order of
+            args (tuple): A variable number of positional arguments in the order of
                           (id, width, height, x, y).
+            kwargs (dict): A dictionary of key/value pairs representing attributes.
         """
-        if len(args) > 0:
-            self.id = args[0]
-        if len(args) > 1:
-            self.width = args[1]
-        if len(args) > 2:
-            self.height = args[2]
-        if len(args) > 3:
-            self.x = args[3]
-        if len(args) > 4:
-            self.y = args[4]
+        if args:
+            self.id = args[0] if len(args) > 0 else self.id
+            self.width = args[1] if len(args) > 1 else self.width
+            self.height = args[2] if len(args) > 2 else self.height
+            self.x = args[3] if len(args) > 3 else self.x
+            self.y = args[4] if len(args) > 4 else self.y
+        else:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                elif key == 'width':
+                    self.width = value
+                elif key == 'height':
+                    self.height = value
+                elif key == 'x':
+                    self.x = value
+                elif key == 'y':
+                    self.y = value
