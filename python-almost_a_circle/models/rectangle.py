@@ -101,12 +101,17 @@ class Rectangle(Base):
 
     def display(self):
         """
-        Prints the Rectangle instance using the '#' character, ignoring x and y.
+        Prints the Rectangle instance using the '#' character, considering x and y.
 
-        This method prints the rectangle based on its width and height.
+        This method prints empty lines for y and shifts the rectangle for x.
         """
+        # Print empty lines for y
+        for _ in range(self.y):
+            print()
+        
+        # Print the rectangle with '#' character, shifted by x
         for _ in range(self.height):
-            print("#" * self.width)
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """
