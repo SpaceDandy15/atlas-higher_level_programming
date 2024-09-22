@@ -5,7 +5,6 @@ The Square class models a square with a size and coordinates (x, y).
 """
 
 from models.rectangle import Rectangle
-from models.base import Base
 
 class Square(Rectangle):
     """
