@@ -6,6 +6,8 @@ to instances.
 """
 
 import json  # Import the json module
+from models.rectangle import Rectangle  # Import Rectangle class
+from models.square import Square  # Import Square class
 
 class Base:
     """
@@ -33,35 +35,21 @@ class Base:
     def to_json_string(list_dictionaries):
         """
         Returns the JSON string representation of list_dictionaries.
-
-        Args:
-            list_dictionaries (list): A list of dictionaries.
-
-        Returns:
-            str: JSON string representation of the list_dictionaries.
-                 If list_dictionaries is None or empty, returns "[]".
         """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
-        return json.dumps(list_dictionaries)  # Convert the list to a JSON string
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
         """
         Writes the JSON string representation of list_objs to a file.
-
-        Args:
-            list_objs (list): A list of instances that inherit from Base.
         """
-        filename = f"{cls.__name__}.json"  # Create the filename based on class name
+        filename = f"{cls.__name__}.json"
         if list_objs is None:
             list_objs = []
-        
-        # Convert the list of objects to a list of dictionaries
         list_dicts = [obj.to_dictionary() for obj in list_objs]
         json_string = cls.to_json_string(list_dicts)
-
-        # Write the JSON string to the file
         with open(filename, 'w') as file:
             file.write(json_string)
 
@@ -69,14 +57,31 @@ class Base:
     def from_json_string(json_string):
         """
         Returns the list of the JSON string representation json_string.
-
-        Args:
-            json_string (str): A string representing a list of dictionaries.
-
-        Returns:
-            list: The list represented by json_string. Returns an empty list
-                  if json_string is None or empty.
         """
         if json_string is None or json_string == "":
             return []
-        return json.loads(json_string)  # Convert the JSON string back to a list
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Returns an instance with all attributes already set.
+
+        Args:
+            dictionary (dict): A dictionary of attributes to set on the instance.
+
+        Returns:
+            instance: An instance of Rectangle or Square with attributes set.
+        """
+        if cls.__name__ == "Rectangle":
+            # Create a dummy Rectangle instance with default attributes
+            dummy_instance = Rectangle(1, 1)
+        elif cls.__name__ == "Square":
+            # Create a dummy Square instance with default attributes
+            dummy_instance = Square(1)
+        else:
+            return None
+
+        # Use the update method to apply the real values from the dictionary
+        dummy_instance.update(**dictionary)
+        return dummy_instance
