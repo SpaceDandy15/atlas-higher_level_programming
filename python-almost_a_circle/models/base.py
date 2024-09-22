@@ -5,6 +5,7 @@ for other geometric shapes. It handles the assignment of unique ids
 to instances.
 """
 
+
 class Base:
     """
     The Base class provides a unique identifier for each instance.
