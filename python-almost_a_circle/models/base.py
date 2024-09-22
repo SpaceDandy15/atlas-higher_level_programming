@@ -6,8 +6,6 @@ to instances.
 """
 
 import json  # Import the json module
-from models.rectangle import Rectangle  # Import Rectangle class
-from models.square import Square  # Import Square class
 
 class Base:
     """
@@ -74,14 +72,13 @@ class Base:
             instance: An instance of Rectangle or Square with attributes set.
         """
         if cls.__name__ == "Rectangle":
-            # Create a dummy Rectangle instance with default attributes
+            from models.rectangle import Rectangle  # Local import
             dummy_instance = Rectangle(1, 1)
         elif cls.__name__ == "Square":
-            # Create a dummy Square instance with default attributes
+            from models.square import Square  # Local import
             dummy_instance = Square(1)
         else:
             return None
 
-        # Use the update method to apply the real values from the dictionary
         dummy_instance.update(**dictionary)
         return dummy_instance
