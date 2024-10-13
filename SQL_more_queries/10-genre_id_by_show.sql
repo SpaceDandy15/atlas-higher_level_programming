@@ -1,5 +1,4 @@
--- Select the title of the TV shows and their associated genre_id
 SELECT tv_shows.title, tv_show_genres.genre_id
 FROM tv_shows
-JOIN tv_show_genres ON tv_shows.id = tv_show_genres.tv_show_id
+JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id  -- Ensure 'show_id' is the correct column
 ORDER BY tv_shows.title ASC, tv_show_genres.genre_id ASC;
