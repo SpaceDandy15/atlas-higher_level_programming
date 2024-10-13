@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 
+"""
+This script connects to a MySQL database and retrieves all states
+from the `states` table where the name starts with 'N'. The results
+are sorted in ascending order by the state ID and printed to the
+standard output.
+"""
+
 import sys
 import MySQLdb
 
