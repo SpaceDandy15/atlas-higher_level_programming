@@ -4,7 +4,7 @@
 
 SELECT 
     tv_shows.title,                      -- Select the title of the TV shows
-    tv_genres.name AS genre              -- Select the genre name (NULL if no genre)
+    tv_genres.name AS name               -- Change alias from genre to name
 FROM 
     tv_shows                              -- From the tv_shows table
 LEFT JOIN 
@@ -15,4 +15,4 @@ LEFT JOIN
     ON tv_show_genres.genre_id = tv_genres.id  -- Using genre ID to join
 ORDER BY 
     tv_shows.title ASC,                  -- Sort results by show title in ascending order
-    genre ASC;                           -- Sort results by genre name in ascending order
+    name ASC;                           -- Sort results by genre name in ascending order
