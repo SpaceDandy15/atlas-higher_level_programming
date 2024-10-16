@@ -16,13 +16,14 @@ if __name__ == "__main__":
     db_name = sys.argv[3]
 
     # Create the engine for connecting to the MySQL server
-    engine = create_engine(f'mysql+mysqldb://{username}:{password}@localhost/{db_name}', pool_pre_ping=True)
+    engine = create_engine(f'mysql+mysqldb://{username}:{password}@localhost/{db_name}',
+    pool_pre_ping=True)
 
     # Bind the engine to a session
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Query to delete State objects where name contains 'a'
+    # Delete State objects where name contains 'a'
     states_to_delete = session.query(State).filter(State.name.like('%a%')).all()
 
     # Delete the states
