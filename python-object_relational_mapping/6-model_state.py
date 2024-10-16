@@ -13,7 +13,8 @@ if __name__ == "__main__":
     db_name = sys.argv[3]
 
     # Connect to the MySQL server using SQLAlchemy's create_engine function
-    engine = create_engine(f'mysql+mysqldb://{username}:{password}@localhost/{db_name}', pool_pre_ping=True)
+    engine = create_engine(f'mysql+mysqldb://{username}:{password}@localhost/{db_name}',
+    pool_pre_ping=True)
 
     # Create the table in the database (if it doesn't exist)
     Base.metadata.create_all(engine)
