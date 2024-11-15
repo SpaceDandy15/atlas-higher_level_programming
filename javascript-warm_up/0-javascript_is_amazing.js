@@ -1,3 +1,4 @@
+#!/usr/bin/node
 // Define a constant variable
 const myVar = "JavaScript is amazing";
 
