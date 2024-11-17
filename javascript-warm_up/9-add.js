@@ -11,4 +11,3 @@ function add(a, b) {
   
   // Print the result of the addition
   console.log(add(a, b));
-  
