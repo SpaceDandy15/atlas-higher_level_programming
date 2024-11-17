@@ -5,7 +5,7 @@ const arg = process.argv[2];
 
 // Parse the argument to an integer
 const x = parseInt(arg);
-//check if x is not a valid number
+// check if x is not a valid number
 if (isNaN(x)) {
   console.log('Missing number of occurrences');
 } else {
