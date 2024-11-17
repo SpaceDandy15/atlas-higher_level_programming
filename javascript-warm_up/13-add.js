@@ -1,4 +1,5 @@
 // 13-add.js
+#!/usr/bin/node
 
 // Define the function that adds two integers
 function add(a, b) {
