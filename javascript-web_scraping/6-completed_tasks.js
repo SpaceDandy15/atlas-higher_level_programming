@@ -14,7 +14,7 @@ request(url, (error, response, body) => {
 
   // Parse the response body (which is in JSON format)
   const tasks = JSON.parse(body);
-  
+
   // Create an object to store the count of completed tasks for each user
   const userTasksCount = {};
 
