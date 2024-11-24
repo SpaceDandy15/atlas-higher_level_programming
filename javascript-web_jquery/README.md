@@ -1,5 +1,5 @@
 # Learning Objectives
-
+*Bonus to test your html files go to the click on folder find the html file and open in browser.
 ---
 
 ### **General**
