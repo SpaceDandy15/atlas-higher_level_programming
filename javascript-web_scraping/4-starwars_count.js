@@ -1,9 +1,9 @@
 #!/usr/bin/node
 /**
  * Script to count and print the number of movies where the character "Wedge Antilles" appears.
- * 
+ *
  * Usage: ./4-starwars_count.js <API_URL>
- * 
+ *
  * Requirements:
  * - The first argument is the API URL of the Star Wars API.
  * - Character ID 18 is used to filter the results.

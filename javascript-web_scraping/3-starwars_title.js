@@ -1,12 +1,12 @@
 #!/usr/bin/node
 /**
  * Script to fetch and print the title of a Star Wars movie given its episode number.
- * 
+ *
  * Usage: ./3-starwars_title.js <movieId>
- * 
+ *
  * The script uses the Star Wars API with the endpoint:
  * https://swapi-api.hbtn.io/api/films/:id
- * 
+ *
  * Requirements:
  * - The first argument is the movie ID (episode number).
  * - Uses the `request` module to perform the API call.
