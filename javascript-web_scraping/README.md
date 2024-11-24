@@ -2,7 +2,8 @@
 
 ## Learning Objectives
 
-Dont forget to install npm tools for each project. 
+Dont forget to install npm tools for each project.
+Dont forget semistandard --fix
 
 ---
 
