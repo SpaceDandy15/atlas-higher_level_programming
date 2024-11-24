@@ -32,7 +32,6 @@ if (!url || !filePath) {
  */
 request(url, (error, response, body) => {
   if (error) {
-    // Log and exit if there's an error with the HTTP request
     console.error('Error fetching the URL:', error.message);
     return;
   }
@@ -40,11 +39,7 @@ request(url, (error, response, body) => {
   // Write the response body to the specified file
   fs.writeFile(filePath, body, 'utf8', (err) => {
     if (err) {
-      // Log and exit if there's an error writing to the file
       console.error('Error writing to file:', err.message);
-    } else {
-      // Success message (optional)
-      console.log(`Content successfully saved to ${filePath}`);
     }
   });
 });
