@@ -2,7 +2,7 @@
 
 ## Learning Objectives
 
-At the end of this project, you should be able to explain the following concepts without the help of Google:
+Dont forget to install npm tools for each project. 
 
 ---
 
